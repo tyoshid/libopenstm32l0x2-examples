@@ -1,0 +1,49 @@
+<!-- header -->
+
+<h1>Silicon Labs Si4737</h1>
+
+<p>The Si4737 is a digital AM/FM radio receiver IC.
+It has a digital audio output and an I2C interface (2-wire control interface).</p>
+
+<p><img src="block_diagram.gif" width="640" height="659" alt="Si4737 block diagram"></p>
+
+<p>
+<img src="si4737.gif" width="409" height="320" alt="Si4737 pin connection">
+<img src="si4737.jpg" width="204" height="320" alt="Si4737 layout">
+</p>
+
+<section>
+	<h2>I2C interface (2-wire control interface)</h2>
+	
+	<p><img src="i2c.gif" width="640" height="353" alt="Si4737 2-wire control interface"></p>
+
+	<table border align="center">
+	<tr><th>Cmd</th><th>Name</th><th></th><th>Cmd</th><th>Name</th></tr>
+	<tr><td>0x01</td><td>POWER_UP</td><th></th><td>0x20</td><td>FM_TUNE_FREQ</td></tr>
+	<tr><td>0x10</td><td>GET_REV</td><th></th><td>0x21</td><td>FM_SEEK_START</td></tr>
+	<tr><td>0x11</td><td>POWER_DOWN</td><th></th><td>0x22</td><td>FM_TUNE_STATUS</td></tr>
+	<tr><td>0x12</td><td>SET_PROPERTY</td><th></th><td>0x23</td><td>FM_RSQ_STATUS</td></tr>
+	<tr><td>0x13</td><td>GET_PROPERTY</td><th></th><td>0x24</td><td>FM_RDS_STATUS</td></tr>
+	<tr><td>0x14</td><td>GET_INT_STATUS</td><th></th><td>0x27</td><td>FM_AGC_STATUS</td></tr>
+	<tr><td>0x15</td><td>PATCH_ARGS</td><th></th><td>0x28</td><td>FM_AGC_OVERRIDE</td></tr>
+	<tr><td>0x16</td><td>PATCH_DATA</td><th></th><td>0x80</td><td>GPIO_CTL</td></tr>
+	<tr><td></td><td></td><th></th><td>0x81</td><td>GPIO_SET</td></tr>
+	</table>
+
+</section>
+
+<section>
+	<h2>Digital audio output (DSP digital audio format)</h2>
+	
+	<p><img src="digital_audio.gif" width="640" height="330" alt="Si4737 digital audio format"></p>
+</section>
+
+<section>
+	<h2>Antenna</h2>
+	
+	<p><img src="antenna.gif" width="640" height="275" alt="Si4737 FM/WB whip antenna"></p>
+		
+	<!-- layout -->
+</section>
+
+<!-- footer -->

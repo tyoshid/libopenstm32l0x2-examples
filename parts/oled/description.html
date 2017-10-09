@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>OLED</title>
+<link href="../../stylesheets/stylesheet.css" rel="stylesheet" type="text/css" media="screen">
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/tyoshid/libopenstm32l0x2" target="_blank">View on GitHub</a>
+
+          <h1 id="project_title">Libopenstm32l0x2</h1>
+          <h2 id="project_tagline">STM32L0x2 peripheral library</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<!-- header -->
+
+<h1>SparkFun Micro OLED Breakout</h1>
+
+<p>The SparkFun Micro OLED Breakout board is a 0.66 inch 64x48 pixels monochrome OLED.
+It has an SPI interface.It use the SSD1306 controller.</p>
+
+<section class="layout">
+<p><img src="layout.jpg" width="305" height="303" alt="OLED layout"></p>
+<p><img src="layout_b.jpg" width="305" height="303" alt="OLED layout (back)"></p>
+</section>
+<!-- layout -->
+
+<section>
+	<h2>SPI interface (4-wire serial interface)</h2>
+	
+	<p><img src="spi.gif" width="640" height="349" alt="OLED SPI interface"></p>
+	
+	<table border align="center">
+	<tr><th>Command</th><th>Code</th></tr>
+	<tr><td>Set Contrast Control</td><td>0x81 A[7:0]</td></tr>	
+	<tr><td>Entire Display ON</td><td>0xa4/0xa5</td></tr>
+	<tr><td>Set Normal/Inverse Display</td><td>0xa6/0xa7</td></tr>
+	<tr><td>Set Display ON/OFF</td><td>0xae/0xaf</td></tr>
+	<tr><td>Continuous Horizontal Scroll Setup</td><td>0x26/0x27 0x00 B[2:0] C[2:0] D[2:0] 0x00 0xff</td></tr>
+	<tr><td>Continuous Vertical and Horizontal Scroll Setup</td><td>0x29/0x2a 0x00 B[2:0] C[2:0] D[2:0] E[5:0]</td></tr>
+	<tr><td>Deactivate Scroll</td><td>0x2e</td></tr>
+	<tr><td>Activate Scroll</td><td>0x2f</td></tr>
+	<tr><td>Set Vertical Scroll Area</td><td>0xa3 A[5:0] B[6:0]</td></tr>
+	<tr><td>Set Lower Column Start Address for Page Addressing Mode</td><td>0x00-0x0f</td></tr>
+	<tr><td>Set Higher Column Start Address for Page Addressing Mode</td><td>0x10-0x1f</td></tr>
+	<tr><td>Set Memory Addressing Mode</td><td>0x20 A[1:0]</td></tr>
+	<tr><td>Set Column Address</td><td>0x21 A[6:0] B[6:0]</td></tr>
+	<tr><td>Set Page Address</td><td>0x22 A[2:0] B[2:0]</td></tr>
+	<tr><td>Set Page Start Address for Page Addressing Mode</td><td>0xb0-0xb7</td></tr>
+	<tr><td>Set Display Start Line</td><td>0x40-0x7f</td></tr>
+	<tr><td>Set Segment Remap</td><td>0xa0/0xa1</td></tr>
+	<tr><td>Set Multiplex Ratio</td><td>0xa8 A[5:0]</td></tr>
+	<tr><td>Set COM Output Scan Direction</td><td>0xc0/0xc8</td></tr>
+	<tr><td>Set Display Offset</td><td>0xd3 A[5:0]</td></tr>
+	<tr><td>Set COM Pins Hardware Configuration</td><td>0xda A[5:4]</td></tr>
+	<tr><td>Set Display Clock Divide Ratio / Oscillator Frequency</td><td>0xd5 A[7:0]</td></tr>
+	<tr><td>Set Precharge Period</td><td>0xd9 A[7:0]</td></tr>
+	<tr><td>Set V<sub>COMH</sub> Deselect Level</td><td>0xdb A[6:4]</td></tr>
+	<tr><td>NOP</td><td>0xe3</td></tr>
+	</table>
+</section>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Libopenstm32l0x2 maintained by <a href="https://github.com/tyoshid">tyoshid</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
+<!-- footer -->
+

@@ -1,0 +1,39 @@
+<!-- header -->
+
+<!-- panorama -->
+
+<!-- schematic -->
+
+<!-- layout -->
+
+<nav>
+	<ul>
+	<li><a href="../../../parts/stm32l052k8t/description.html" target="_blank">MCU (STM32L052K8T)</a></li>
+	<li><a href="../../../parts/sli-343x8/description.html" target="_blank">LED (SLI-343x8)</a></li>
+	</ul>
+</nav>
+
+<section>
+	<h2>minicom</h2>
+	
+<pre><samp>$ </samp><kbd>sudo minicom -D /dev/ttyACM0</kbd></pre>
+
+<pre><samp>
+Welcome to minicom 2.7.1
+
+OPTIONS: I18n 
+Compiled on Jul 15 2017, 15:04:10.
+Port /dev/ttyACM0, 10:12:56
+
+Press CTRL-A Z for help on special keys
+
+usart_getchar> </samp><kbd>abc def,ghi-jkl</kbd><samp>
+token 1: abc
+token 2: def
+token 3: ghi
+token 4: jkl
+4 tokens found.
+usart_getchar> </samp></pre>
+</section>
+
+<!-- footer -->

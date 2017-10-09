@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>STM32L052K8T</title>
+<link href="../../stylesheets/stylesheet.css" rel="stylesheet" type="text/css" media="screen">
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/tyoshid/libopenstm32l0x2" target="_blank">View on GitHub</a>
+
+          <h1 id="project_title">Libopenstm32l0x2</h1>
+          <h2 id="project_tagline">STM32L0x2 peripheral library</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<!-- header -->
+
+<h1>STM32L052K8T</h1>
+
+<p>The STM32L052K8T is a 32-bit ARM Cortex-M0+ microcontroller.
+It can run at a 32 MHz frequency without any external parts.
+It operates from a 1.8 to 3.6 V power supply.</p>
+<p>The STM32L052K8T has the following in a 32-pin LQFP package.</p>
+
+<img src="stm32l052k8t.jpg" width="320" height="311" alt="STM32L052K8T 32-pin LQFP" style="float: right; ">
+
+<ul>
+<li>64 KB flash memory</li>
+<li>8 KB SRAM</li>
+<li>2 KB data EEPROM</li>
+<li>25x GPIOs</li>
+<li>5x 16-bit timers</li>
+<li>1x SysTick timer</li>
+<li>1x SPI</li>
+<li>1x I2C</li>
+<li>2x USARTs</li>
+<li>1x USB</li>
+<li>10-channel 12-bit ADC</li>
+<li>1-channel 12-bit DAC</li>
+<li>2x comparators</li>
+<li>7-channel DMA controller</li>
+<li>RTC</li>
+<li>CRC calculation unit</li>
+<li>Random number generator</li>
+<li>14x capacitive sensing channels</li>
+<li>2x watchdogs</li>
+<li>Firewall protection</li>
+<li>32 kHz oscillator</li>
+<li>16 MHz RC</li>
+<li>37 kHz RC</li>
+<li>65 kHz to 4.2 MHz RC</li>
+<li>48 MHz RC</li>
+<li>PLL</li>
+</ul>
+
+<section>
+	<h2>LQFP to DIP adapter</h2>
+
+<section>
+<p><a href="schematic.pdf" target="_blank">
+<img src="schematic.jpg" width="640" height="452" alt="STM32L052K8T schematic">
+</a></p>
+</section>
+	<!-- schematic -->
+
+<section class="layout">
+<p><img src="layout.jpg" width="305" height="420" alt="STM32L052K8T layout"></p>
+<p><img src="layout_b.jpg" width="305" height="420" alt="STM32L052K8T layout (back)"></p>
+</section>
+	<!-- layout -->
+
+	<section>
+		<h3>DIP32 pinout</h3>
+
+		<table border align="center">
+		<tr><th>DIP pin number</th><th>Name</th><th>5 V</th><th>Additional functions</th><th></th><th>DIP pin number</th><th>Name</th><th>5 V</th><th>Additional functions</th></tr>
+		<tr><td>1</td><td>PA15</td><td>Y</td><td></td><th></th><td>32</td><td>PA14</td><td>Y</td><td></td></tr>
+		<tr><td>2</td><td>PB3</td><td>Y</td><td>COMP2_INN</td><th></th><td>31</td><td>PA13</td><td>Y</td><td></td></tr>
+		<tr><td>3</td><td>PB4</td><td>Y</td><td>COMP2_INP</td><th></th><td>30</td><td>PA12</td><td>Y</td><td>USB_DP</td></tr>
+		<tr><td>4</td><td>PB5</td><td>Y</td><td>COMP2_INP</td><th></th><td>29</td><td>PA11</td><td>Y</td><td>USB_DM</td></tr>
+		<tr><td>5</td><td>PB6</td><td>Y</td><td>COMP2_INP</td><th></th><td>28</td><td>PA10</td><td>Y</td><td></td></tr>
+		<tr><td>6</td><td>PB7</td><td>Y</td><td>COMP2_INP, PVD_IN</td><th></th><td>27</td><td>PA9</td><td>Y</td><td></td></tr>
+		<tr><td>7</td><td>BOOT0</td><td></td><td></td><th></th><td>26</td><td>PA8</td><td>Y</td><td></td></tr>
+		<tr><td>8</td><td>VSS</td><td></td><td></td><th></th><td>25</td><td>VDD</td><td></td><td></td></tr>
+		<tr><td>9</td><td>VDD</td><td></td><td></td><th></th><td>24</td><td>VSS</td><td></td><td></td></tr>
+		<tr><td>10</td><td>PC14- OSC32_IN</td><td>Y</td><td>OSC32_IN</td><th></th><td>23</td><td>PB1</td><td>Y</td><td>ADC_IN9, VREF_OUT</td></tr>
+		<tr><td>11</td><td>PC15- OSC32_OUT</td><td>N</td><td>OSC32_OUT</td><th></th><td>22</td><td>PB0</td><td>Y</td><td>ADC_IN8, VREF_OUT</td></tr>
+		<tr><td>12</td><td>NRST</td><td></td><td></td><th></th><td>21</td><td>PA7</td><td>Y</td><td>ADC_IN7</td></tr>
+		<tr><td>13</td><td>VDDA</td><td></td><td></td><th></th><td>20</td><td>PA6</td><td>Y</td><td>ADC_IN6</td></tr>
+		<tr><td>14</td><td>PA0</td><td>N</td><td>COMP1_INN, ADC_IN0, RTC_TAMP2 / WKUP1</td><th></th><td>19</td><td>PA5</td><td>N</td><td>COMP1_INN, COMP2_INN, ADC_IN5</td></tr>
+		<tr><td>15</td><td>PA1</td><td>Y</td><td>COMP1_INP, ADC_IN1</td><th></th><td>18</td><td>PA4</td><td>N</td><td>COMP1_INN, COMP2_INN, ADC_IN4, DAC_OUT</td></tr>
+		<tr><td>16</td><td>PA2</td><td>Y</td><td>COMP2_INN, ADC_IN2</td><th></th><td>17</td><td>PA3</td><td>Y</td><td>COMP2_INP, ADC_IN3</td></tr>
+		</table>
+	</section>
+
+	<section>
+		<h3>Alternate function</h3>
+
+		<table border align="center">
+		<tr><th>DIP pin number</th><th>Name</th><th>Alternate functions</th><th></th><th>DIP pin number</th><th>Name</th><th>Alternate functions</th></tr>
+		<tr><td>1</td><td>PA15</td><td>SPI1_NSS (AF0), TIM2_ETR (AF2), EVENTOUT (AF3), USART2_RX (AF4), TIM2_CH1 (AF5)</td><th></th><td>32</td><td>PA14</td><td>SWCLK (AF0), USART2_TX (AF4)</td></tr>
+		<tr><td>2</td><td>PB3</td><td>SPI1_SCK (AF0), TIM2_CH2 (AF2), TSC_G5_IO1 (AF3), EVENTOUT (AF4)</td><th></th><td>31</td><td>PA13</td><td>SWDIO (AF0), USB_OE (AF2)</td></tr>
+		<tr><td>3</td><td>PB4</td><td>SPI1_MISO (AF0), EVENTOUT (AF2), TSC_G5_IO2 (AF3), TIM22_CH1 (AF4)</td><th></th><td>30</td><td>PA12</td><td>SPI1_MOSI (AF0), EVENTOUT (AF2), TSC_G4_IO4 (AF3), USART1_RTS_DE (AF4), COMP2_OUT (AF7)</td></tr>
+		<tr><td>4</td><td>PB5</td><td>SPI1_MOSI (AF0), LPTIM1_IN1 (AF2), I2C1_SMBA (AF3), TIM22_CH2 (AF4)</td><th></th><td>29</td><td>PA11</td><td>SPI1_MISO (AF0), EVENTOUT (AF2), TSC_G4_IO3 (AF3), USART1_CTS (AF4), COMP1_OUT (AF7)</td></tr>
+		<tr><td>5</td><td>PB6</td><td>USART1_TX (AF0), I2C1_SCL (AF1), LPTIM1_ETR (AF2), TSC_G5_IO3 (AF3)</td><th></th><td>28</td><td>PA10</td><td>TSC_G4_IO2 (AF3), USART1_RX (AF4)</td></tr>
+		<tr><td>6</td><td>PB7</td><td>USART1_RX (AF0), I2C1_SDA (AF1), LPTIM1_IN2 (AF2), TSC_G5_IO4 (AF3)</td><th></th><td>27</td><td>PA9</td><td>MCO (AF0), TSC_G4_IO1 (AF3), USART1_TX (AF4)</td></tr>
+		<tr><td>7</td><td>BOOT0</td><td></td><th></th><td>26</td><td>PA8</td><td>MCO (AF0), USB_CRS_SYNC (AF2), EVENTOUT (AF3), USART1_CK (AF4)</td></tr>
+		<tr><td>8</td><td>VSS</td><td></td><th></th><td>25</td><td>VDD</td><td></td></tr>
+		<tr><td>9</td><td>VDD</td><td></td><th></th><td>24</td><td>VSS</td><td></td></tr>
+		<tr><td>10</td><td>PC14-OSC32_IN</td><td></td><th></th><td>23</td><td>PB1</td><td>TSC_G3_IO3 (AF3)</td></tr>
+		<tr><td>11</td><td>PC15-OSC32_OUT</td><td></td><th></th><td>22</td><td>PB0</td><td>EVENTOUT (AF0), TSC_G3_IO2 (AF3)</td></tr>
+		<tr><td>12</td><td>NRST</td><td></td><th></th><td>21</td><td>PA7</td><td>SPI1_MOSI (AF0), TSC_G2_IO4 (AF3), TIM22_CH2 (AF5), EVENTOUT (AF6), COMP2_OUT (AF7)</td></tr>
+		<tr><td>13</td><td>VDDA</td><td></td><th></th><td>20</td><td>PA6</td><td>SPI1_MISO (AF0), TSC_G2_IO3 (AF3), TIM22_CH1 (AF5), EVENTOUT (AF6), COMP1_OUT (AF7)</td></tr>
+		<tr><td>14</td><td>PA0</td><td>TIM2_CH1 (AF2), TSC_G1_IO1 (AF3), USART2_CTS (AF4), TIM2_ETR (AF5), COMP1_OUT (AF7)</td><th></th><td>19</td><td>PA5</td><td>SPI1_SCK (AF0), TIM2_ETR (AF2), TSC_G2_IO2 (AF3), TIM2_CH1 (AF5)</td></tr>
+		<tr><td>15</td><td>PA1</td><td>EVENTOUT (AF0), TIM2_CH2 (AF2), TSC_G1_IO2 (AF3), USART2_RTS_DE (AF4), TIM21_ETR (AF5)</td><th></th><td>18</td><td>PA4</td><td>SPI1_NSS (AF0), TSC_G2_IO1 (AF3), USART2_CK (AF4), TIM22_ETR (AF5)</td></tr>
+		<tr><td>16</td><td>PA2</td><td>TIM21_CH1 (AF0), TIM2_CH3 (AF2), TSC_G1_IO3 (AF3), USART2_TX (AF4), COMP2_OUT (AF7)</td><th></th><td>17</td><td>PA3</td><td>TIM21_CH2 (AF0), TIM2_CH4 (AF2), TSC_G1_IO4 (AF3), USART2_RX (AF4)</td></tr>
+		</table>
+	</section>	
+</section> 
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Libopenstm32l0x2 maintained by <a href="https://github.com/tyoshid">tyoshid</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
+<!-- footer -->

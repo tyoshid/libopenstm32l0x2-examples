@@ -1,0 +1,42 @@
+<!-- header -->
+
+<h1>AQM1248A-RN</h1>
+
+<p>The AQM1248 is a 128x48 graphic LCD.
+It use the ST7565R controller.
+It has an SPI interface.</p>
+
+<p><img src="aqm1248.gif" width="417" height="465" alt="AQM1248 pinout"></p>
+
+<!-- layout -->
+
+<section>
+	<h2>SPI interface</h2>
+	
+	<p><img src="spi.gif" width="640" height="330" alt="AQM1248 SPI interface"></p>
+	
+	<table border align="center">
+	<tr><th>Command</th><th>Code</th></tr>
+	<tr><td>Display ON/OFF</td><td>1 0 1 0 1 1 1 0/1</td></tr>
+	<tr><td>Display start line set</td><td>0 1 A5 A4 A3 A2 A1 A0</td></tr>
+	<tr><td>Page address set</td><td>1 0 1 1 A3 A2 A1 A0</td></tr>
+	<tr><td>Column address set</td><td>0 0 0 1/0 A3 A2 A1 A0</td></tr>
+	<tr><td>ADC select</td><td>1 0 1 0 0 0 0 0/1</td></tr>
+	<tr><td>Display normal/reverse</td><td>1 0 1 0 0 1 1 0/1</td></tr>
+	<tr><td>Display all points ON/OFF</td><td>1 0 1 0 0 1 0 0/1</td></tr>
+	<tr><td>LCD bias set</td><td>1 0 1 0 0 0 1 0/1</td></tr>
+	<tr><td>Read-modify-write</td><td>1 1 1 0 0 0 0 0</td></tr>
+	<tr><td>End</td><td>1 1 1 0 1 1 1 0</td></tr>
+	<tr><td>Reset</td><td>1 1 1 0 0 0 1 0</td></tr>
+	<tr><td>Common output mode select</td><td>1 1 0 0 0/1 * * *</td></tr>
+	<tr><td>Power control set</td><td>0 0 1 0 1 M2 M1 M0</td></tr>
+	<tr><td>V0 voltage regulator internal resistor ratio set</td><td>0 0 1 0 0 R2 R1 R0</td></tr>
+	<tr><td>Electronic volume mode set</td><td>1 0 0 0 0 0 0 1 &ensp; 0 0 V5 V4 V3 V2 V1 V0</td></tr>
+	<tr><td>Static indicator ON/OFF</td><td>1 0 1 0 1 1 0 0/1 &ensp; 0 0 0 0 0 0 0 M0</td></tr>
+	<tr><td>Booster ratio set</td><td>1 1 1 1 1 0 0 0 &ensp; 0 0 0 0 0 0 V1 V0</td></tr>
+	<tr><td>NOP</td><td>1 1 1 0 0 0 1 1</td></tr>
+	</table>
+</section>
+
+<!-- footer -->
+

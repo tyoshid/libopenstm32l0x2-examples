@@ -1,0 +1,35 @@
+<!-- header -->
+
+<h1>Microchip 25LC640A</h1>
+
+<p>The 25LC640A is a 64 Kbit (8192 x 8-bit) EEPROM.
+It has an SPI interface.</p>
+
+<p><img src="pdip.gif" width="291" height="320" alt="25LC640A pinout">
+<img src="25lc640a.jpg" width="303" height="320" alt="25LC640A"></p>
+
+<section>
+	<h2>SPI interface</h2>
+
+	<p><img src="spi.gif" width="640" height="316" alt="25LC640A SPI interface"></p>
+	
+	<h3>Instruction</h3>
+	
+	<table border align="center">
+	<tr><th>Name</th><th>Format</th><th>Description</th></tr>
+	<tr><td>READ</td><td>0000 0011</td><td>Read data from memory array beginning at selected address</td></tr>
+	<tr><td>WRITE</td><td>0000 0010</td><td>Write data to memory array beginning at selected address</td></tr>
+	<tr><td>WRDI</td><td>0000 0100</td><td>Reset the write enable latch</td></tr>
+	<tr><td>WREN</td><td>0000 0110</td><td>Set the write enable latch</td></tr>
+	<tr><td>RDSR</td><td>0000 0101</td><td>Read STATUS register</td></tr>
+	<tr><td>WRSR</td><td>0000 0001</td><td>Write STATUS register</td></tr>
+	</table>
+
+	<p><img src="read.gif" width="640" height="525" alt="25LC640A SPI read"></p>
+	<p><img src="wren.gif" width="640" height="246" alt="25LC640A SPI write enable"></p>
+	<p><img src="byte_write.gif" width="640" height="246" alt="25LC640A SPI byte write"></p>
+	<p><img src="page_write.gif" width="640" height="476" alt="25LC640A SPI page write"></p>
+</section>
+
+<!-- footer -->
+

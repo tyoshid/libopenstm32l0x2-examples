@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>AQM1248</title>
+<link href="../../stylesheets/stylesheet.css" rel="stylesheet" type="text/css" media="screen">
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/tyoshid/libopenstm32l0x2" target="_blank">View on GitHub</a>
+
+          <h1 id="project_title">Libopenstm32l0x2</h1>
+          <h2 id="project_tagline">STM32L0x2 peripheral library</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<!-- header -->
+
+<h1>AQM1248A-RN</h1>
+
+<p>The AQM1248 is a 128x48 graphic LCD.
+It use the ST7565R controller.
+It has an SPI interface.</p>
+
+<p><img src="aqm1248.gif" width="417" height="465" alt="AQM1248 pinout"></p>
+
+<section class="layout">
+<p><img src="layout.jpg" width="305" height="189" alt="AQM1248 layout"></p>
+<p><img src="layout_b.jpg" width="305" height="189" alt="AQM1248 layout (back)"></p>
+</section>
+<!-- layout -->
+
+<section>
+	<h2>SPI interface</h2>
+	
+	<p><img src="spi.gif" width="640" height="330" alt="AQM1248 SPI interface"></p>
+	
+	<table border align="center">
+	<tr><th>Command</th><th>Code</th></tr>
+	<tr><td>Display ON/OFF</td><td>1 0 1 0 1 1 1 0/1</td></tr>
+	<tr><td>Display start line set</td><td>0 1 A5 A4 A3 A2 A1 A0</td></tr>
+	<tr><td>Page address set</td><td>1 0 1 1 A3 A2 A1 A0</td></tr>
+	<tr><td>Column address set</td><td>0 0 0 1/0 A3 A2 A1 A0</td></tr>
+	<tr><td>ADC select</td><td>1 0 1 0 0 0 0 0/1</td></tr>
+	<tr><td>Display normal/reverse</td><td>1 0 1 0 0 1 1 0/1</td></tr>
+	<tr><td>Display all points ON/OFF</td><td>1 0 1 0 0 1 0 0/1</td></tr>
+	<tr><td>LCD bias set</td><td>1 0 1 0 0 0 1 0/1</td></tr>
+	<tr><td>Read-modify-write</td><td>1 1 1 0 0 0 0 0</td></tr>
+	<tr><td>End</td><td>1 1 1 0 1 1 1 0</td></tr>
+	<tr><td>Reset</td><td>1 1 1 0 0 0 1 0</td></tr>
+	<tr><td>Common output mode select</td><td>1 1 0 0 0/1 * * *</td></tr>
+	<tr><td>Power control set</td><td>0 0 1 0 1 M2 M1 M0</td></tr>
+	<tr><td>V0 voltage regulator internal resistor ratio set</td><td>0 0 1 0 0 R2 R1 R0</td></tr>
+	<tr><td>Electronic volume mode set</td><td>1 0 0 0 0 0 0 1 &ensp; 0 0 V5 V4 V3 V2 V1 V0</td></tr>
+	<tr><td>Static indicator ON/OFF</td><td>1 0 1 0 1 1 0 0/1 &ensp; 0 0 0 0 0 0 0 M0</td></tr>
+	<tr><td>Booster ratio set</td><td>1 1 1 1 1 0 0 0 &ensp; 0 0 0 0 0 0 V1 V0</td></tr>
+	<tr><td>NOP</td><td>1 1 1 0 0 0 1 1</td></tr>
+	</table>
+</section>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Libopenstm32l0x2 maintained by <a href="https://github.com/tyoshid">tyoshid</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
+<!-- footer -->
+

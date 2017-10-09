@@ -1,0 +1,38 @@
+<!-- header -->
+
+<h1>Microchip MCP4131</h1>
+
+<p>The MCP4131 is a 7-bit digital potentiometer. 
+It has an SPI interface.</p>
+
+<p><img src="block_diagram.gif" width="640" height="403" alt="MCP4131 block diagram"></p>
+
+<p>
+<img src="pdip.gif" width="291" height="320" alt="MCP4131 pinout">
+<img src="mcp4131.jpg" width="285" height="320" alt="MCP4131-103E/P">
+</p>
+
+<section>
+	<h2>SPI interface</h2>
+	
+	<img src="spi.gif" width="640" height="457" alt="MCP4131 SPI interface">
+	
+	<table border align="center">
+	<tr><th>Address</th><th>Function</th></tr>
+	<tr><td>0x00</td><td>Volatile Wiper 0</td></tr>
+	<tr><td>0x01</td><td>Volatile Wiper 1</td></tr>
+	<tr><td>0x04</td><td>Volatile TCON Register</td></tr>
+	<tr><td>0x05</td><td>Status Register</td></tr>
+	</table>
+
+	<table border align="center">
+	<tr><th>C1:C0</th><th>Command</th><th>Type</th></tr>
+	<tr><td>00</td><td>Write Data</td><td>16-bit</td></tr>
+	<tr><td>01</td><td>Increment</td><td>8-bit</td></tr>
+	<tr><td>10</td><td>Decrement</td><td>8-bit</td></tr>
+	<tr><td>11</td><td>Read Data</td><td>16-bit</td></tr>
+	</table>
+</section>
+
+<!-- footer -->
+

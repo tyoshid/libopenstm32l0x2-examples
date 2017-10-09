@@ -1,0 +1,52 @@
+<!-- header -->
+
+<h1>SparkFun Basic 16x2 Character LCD - Amber on Black 3.3V</h1>
+
+<p>(Xiamen ADM1602K-NSA-FBS/3.3V)</p>
+
+<p>This is a 16 character by 2 line LCD display.
+It use the ST7066 controller.</p>
+
+<!-- layout -->
+
+<table border align="center">
+<tr><th>Pin no.</th><th>Symbol</th><th></th><th>Pin no.</th><th>Symbol</th></tr>
+<tr><td>1</td><td>VSS</td><th></th><td>9</td><td>DB2</td></tr>
+<tr><td>2</td><td>VDD</td><th></th><td>10</td><td>DB3</td></tr>
+<tr><td>3</td><td>VO</td><th></th><td>11</td><td>DB4</td></tr>
+<tr><td>4</td><td>RS</td><th></th><td>12</td><td>DB5</td></tr>
+<tr><td>5</td><td>R/W</td><th></th><td>13</td><td>DB6</td></tr>
+<tr><td>6</td><td>E</td><th></th><td>14</td><td>DB7</td></tr>
+<tr><td>7</td><td>DB0</td><th></th><td>15</td><td>LED+</td></tr>
+<tr><td>8</td><td>DB1</td><th></th><td>16</td><td>LED-</td></tr>
+</table>
+
+<section>
+	<h2>MPU interface</h2>
+
+	<p><img src="mpu.gif" width="640" height="427" alt="MPU interface"></p>
+
+	<table border align="center">
+	<tr><th>Instruction</th><th>RS</th><th>R/W</th><th>DB7 - DB0</th><th>Time</th></tr>
+	<tr><td>Clear display</td><td>0</td><td>0</td><td>00000001</td><td>1.52 ms</td></tr>
+	<tr><td>Return home</td><td>0</td><td>0</td><td>0000001x</td><td>1.52 ms</td></tr>
+	<tr><td>Entry mode set</td><td>0</td><td>0</td><td>000001[I/D]S</td><td>37 us</td></tr>
+	<tr><td>Display ON/OFF</td><td>0</td><td>0</td><td>00001DCB</td><td>37 us</td></tr>
+	<tr><td>Cursor or display shift</td><td>0</td><td>0</td><td>0001[S/C][R/L]xx</td><td>37 us</td></tr>
+	<tr><td>Function set</td><td>0</td><td>0</td><td>001[DL]NFxx</td><td>37 us</td></tr>
+	<tr><td>Set CGRAM address</td><td>0</td><td>0</td><td>01[A5][A4][A3][A2][A1][A0]</td><td>37 us</td></tr>
+	<tr><td>Set DDRAM address</td><td>0</td><td>0</td><td>1[A6][A5][A4][A3][A2][A1][A0]</td><td>37 us</td></tr>
+	<tr><td>Read Busy flag and address</td><td>0</td><td>1</td><td>[BF][A6][A5][A4][A3][A2][A1][A0]</td><td>0 us</td></tr>
+	<tr><td>Write data to RAM</td><td>1</td><td>0</td><td>[D7][D6][D5][D4][D3][D2][D1][D0]</td><td>43 us</td></tr>
+	<tr><td>Read data from RAM</td><td>1</td><td>1</td><td>[D7][D6][D5][D4][D3][D2][D1][D0]</td><td>43 us</td></tr>
+	</table>
+</section>
+
+<section>
+	<h2>Contrast adjust</h2>
+	
+	<p><img src="contrast.gif" width="425" height="521" alt="contrast adjust"></p>
+</section>
+
+<!-- footer -->
+

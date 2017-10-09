@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>PTC08</title>
+<link href="../../stylesheets/stylesheet.css" rel="stylesheet" type="text/css" media="screen">
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/tyoshid/libopenstm32l0x2" target="_blank">View on GitHub</a>
+
+          <h1 id="project_title">Libopenstm32l0x2</h1>
+          <h2 id="project_tagline">STM32L0x2 peripheral library</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<!-- header -->
+
+<h1>Putal PTC08</h1>
+
+<p>(Adafruit TTL serial JPEG camera with NTSC video #397)</p>
+
+<p>The PTC08 is a serial camera module with 640x480 JPEG output.
+It has an asynchronous serial communication interface.
+It use the VC0706 controller.</p>
+
+<section class="layout">
+<p><img src="layout.jpg" width="305" height="307" alt="PTC08 layout"></p>
+<p><img src="layout_b.jpg" width="305" height="307" alt="PTC08 layout (back)"></p>
+</section>
+<!-- layout -->
+
+<section>
+	<h2>UART interface</h2>
+	
+	<p><img src="uart.gif" width="640" height="216" alt="PTC08 UART interface"></p>
+	
+	<h3>Command</h3>
+	
+	<table border align="center">
+	<tr><th>Command</th><th>Code</th><th></th><th>Command</th><th>Code</th></tr>
+	<tr><td>GEN_VERSION</td><td>0x11</td><th></th><td>COLOR_STATUS</td><td>0x3D</td></tr>	
+	<tr><td>SET_SERIAL_NUMBER</td><td>0x21</td><th></th><td>POWER_SAVE_CTRL</td><td>0x3E</td></tr>	
+	<tr><td>SET_PORT</td><td>0x24</td><th></th><td>POWER_SAVE_STATUS</td><td>0x3F</td></tr>	
+	<tr><td>SYSTEM_RESET</td><td>0x26</td><th></th><td>AE_CTRL</td><td>0x40</td></tr>	
+	<tr><td>READ_DATA</td><td>0x30</td><th></th><td>AE_STATUS</td><td>0x41</td></tr>	
+	<tr><td>WRITE_DATA</td><td>0x31</td><th></th><td>MOTION_CTRL</td><td>0x42</td></tr>	
+	<tr><td>READ_FBUF</td><td>0x32</td><th></th><td>MOTION_STATUS</td><td>0x43</td></tr>	
+	<tr><td>WRITE_FBUF</td><td>0x33</td><th></th><td>TV_OUT_CTRL</td><td>0x44</td></tr>	
+	<tr><td>GET_FBUF_LEN</td><td>0x34</td><th></th><td>OSD_ADD_CHAR</td><td>0x45</td></tr>	
+	<tr><td>SET_FBUF_LEN</td><td>0x35</td><th></th><td>DOWNSIZE_CTRL</td><td>0x54</td></tr>	
+	<tr><td>FBUF_CTRL</td><td>0x36</td><th></th><td>DOWNSIZE_STATUS</td><td>0x55</td></tr>	
+	<tr><td>COMM_MOTION_CTRL</td><td>0x37</td><th></th><td>GET_FLASH_SIZE</td><td>0x60</td></tr>	
+	<tr><td>COMM_MOTION_STATUS</td><td>0x38</td><th></th><td>ERASE_FLASH_SECTOR</td><td>0x61</td></tr>	
+	<tr><td>COMM_MOTION_DETECTED</td><td>0x39</td><th></th><td>ERASE_FLASH_ALL</td><td>0x62</td></tr>	
+	<tr><td>MIRROR_CTRL</td><td>0x3A</td><th></th><td>READ_LOGO</td><td>0x70</td></tr>	
+	<tr><td>MIRROR_STATUS</td><td>0x3B</td><th></th><td>SET_BITMAP</td><td>0x71</td></tr>	
+	<tr><td>COLOR_CTRL</td><td>0x3C</td><th></th><td>BATCH_WRITE</td><td>0x80</td></tr>	
+	</table>
+	
+	<h3>Status</h3>
+	
+	<table border align="center">
+	<tr><th>Code</th><th>Description</th></tr>
+	<tr><td>0</td><td>Executing command right.</td></tr>
+	<tr><td>1</td><td>System don't receive the command.</td></tr>
+	<tr><td>2</td><td>The data-length is error.</td></tr>
+	<tr><td>3</td><td>Data format error.</td></tr>
+	<tr><td>4</td><td>The command can not execute now.</td></tr>
+	<tr><td>5</td><td>Command received, but executed wrong.</td></tr>
+	</table>
+</section>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Libopenstm32l0x2 maintained by <a href="https://github.com/tyoshid">tyoshid</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
+<!-- footer -->
+

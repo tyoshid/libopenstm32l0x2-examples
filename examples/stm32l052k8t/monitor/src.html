@@ -1,0 +1,131 @@
+<!-- header -->
+
+<!-- panorama -->
+	
+<!-- schematic -->
+
+<!-- layout -->
+
+<nav>
+	<ul>
+	<li><a href="../../../parts/stm32l052k8t/description.html" target="_blank">MCU (STM32L052K8T)</a></li>
+	<li><a href="../../../parts/sli-343x8/description.html" target="_blank">LED (SLI-343x8)</a></li>
+	</ul>
+</nav>
+
+<section>
+	<h2>minicom</h2>
+	
+<pre><samp>$ </samp><kbd>sudo minicom -D /dev/ttyACM0</kbd></pre>
+
+<pre><samp>
+Welcome to minicom 2.7.1
+
+OPTIONS: I18n 
+Compiled on Jul 15 2017, 15:04:10.
+Port /dev/ttyACM0, 14:29:12
+
+Press CTRL-A Z for help on special keys
+
+Libopenstm32l0x2 monitor version 0.1
+BSS end = 0x20000fa8
+mon> </samp><kbd>rcc_enable_clock(0)</kbd><samp>
+mon> </samp><kbd>gpio_set_mode(9,1)</kbd><samp>
+mon> </samp><kbd>gpio_toggle(1)</kbd><samp>
+mon> </samp><kbd>gpio_toggle(1)</kbd><samp>
+mon> </samp><kbd>* 0x50000000</kbd><samp>                                                               
+0x50000000: 0xebebfcfd                                                          
+mon> </samp><kbd>* 0x50000014</kbd><samp>                                                               
+0x50000014: 0x00000000                                                          
+mon> </samp><kbd>* 0x50000014 = 1</kbd><samp>                                                           
+0x50000014: <- 0x00000001                                                       
+mon> </samp></pre>
+</section>
+
+<section>
+	<h2>constant</h2>
+
+<pre><samp>$ </samp><kbd>pwd</kbd><samp>
+/home/foo/libopenstm32l0x2/examples/stm32/l0/l0x2/stm32l052k8t/monitor/constant
+$ </samp><kbd>./constant RCC_GPIOA</kbd><samp>
+0x00000000 0
+$ </samp><kbd>./constant GPIO_OUTPUT</kbd><samp>
+0x00000009 9
+$ </samp><kbd>./constant GPIO_PA0</kbd><samp>
+0x00000001 1
+$ </samp><kbd>./constant -c gpio register</kbd><samp>
+GPIOA_MODER                             0x50000000
+GPIOB_MODER                             0x50000400
+GPIOC_MODER                             0x50000800
+GPIOD_MODER                             0x50000c00
+GPIOE_MODER                             0x50001000
+GPIOH_MODER                             0x50001c00
+GPIOA_OTYPER                            0x50000004
+GPIOB_OTYPER                            0x50000404
+GPIOC_OTYPER                            0x50000804
+GPIOD_OTYPER                            0x50000c04
+GPIOE_OTYPER                            0x50001004
+GPIOH_OTYPER                            0x50001c04
+GPIOA_OSPEEDR                           0x50000008
+GPIOB_OSPEEDR                           0x50000408
+GPIOC_OSPEEDR                           0x50000808
+GPIOD_OSPEEDR                           0x50000c08
+GPIOE_OSPEEDR                           0x50001008
+GPIOH_OSPEEDR                           0x50001c08
+GPIOA_PUPDR                             0x5000000c
+GPIOB_PUPDR                             0x5000040c
+GPIOC_PUPDR                             0x5000080c
+GPIOD_PUPDR                             0x50000c0c
+GPIOE_PUPDR                             0x5000100c
+GPIOH_PUPDR                             0x50001c0c
+GPIOA_IDR                               0x50000010
+GPIOB_IDR                               0x50000410
+GPIOC_IDR                               0x50000810
+GPIOD_IDR                               0x50000c10
+GPIOE_IDR                               0x50001010
+GPIOH_IDR                               0x50001c10
+GPIOA_ODR                               0x50000014
+GPIOB_ODR                               0x50000414
+GPIOC_ODR                               0x50000814
+GPIOD_ODR                               0x50000c14
+GPIOE_ODR                               0x50001014
+GPIOH_ODR                               0x50001c14
+GPIOA_BSRR                              0x50000018
+GPIOB_BSRR                              0x50000418
+GPIOC_BSRR                              0x50000818
+GPIOD_BSRR                              0x50000c18
+GPIOE_BSRR                              0x50001018
+GPIOH_BSRR                              0x50001c18
+GPIOA_LCKR                              0x5000001c
+GPIOB_LCKR                              0x5000041c
+GPIOC_LCKR                              0x5000081c
+GPIOD_LCKR                              0x50000c1c
+GPIOE_LCKR                              0x5000101c
+GPIOH_LCKR                              0x50001c1c
+GPIOA_AFRL                              0x50000020
+GPIOB_AFRL                              0x50000420
+GPIOC_AFRL                              0x50000820
+GPIOD_AFRL                              0x50000c20
+GPIOE_AFRL                              0x50001020
+GPIOH_AFRL                              0x50001c20
+GPIOA_AFRH                              0x50000024
+GPIOB_AFRH                              0x50000424
+GPIOC_AFRH                              0x50000824
+GPIOD_AFRH                              0x50000c24
+GPIOE_AFRH                              0x50001024
+GPIOH_AFRH                              0x50001c24
+GPIOA_BRR                               0x50000028
+GPIOB_BRR                               0x50000428
+GPIOC_BRR                               0x50000828
+GPIOD_BRR                               0x50000c28
+GPIOE_BRR                               0x50001028
+GPIOH_BRR                               0x50001c28
+$ </samp><kbd>./constant -c gpio gpiox_moder</kbd><samp>
+GPIO_MODER_INPUT                        0x00000000
+GPIO_MODER_OUTPUT                       0x00000001
+GPIO_MODER_ALTFN                        0x00000002
+GPIO_MODER_ANALOG                       0x00000003
+$ </samp></pre>
+</section>
+
+<!-- footer -->

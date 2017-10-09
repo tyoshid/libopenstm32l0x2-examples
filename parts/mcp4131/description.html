@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>MCP4131</title>
+<link href="../../stylesheets/stylesheet.css" rel="stylesheet" type="text/css" media="screen">
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/tyoshid/libopenstm32l0x2" target="_blank">View on GitHub</a>
+
+          <h1 id="project_title">Libopenstm32l0x2</h1>
+          <h2 id="project_tagline">STM32L0x2 peripheral library</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<!-- header -->
+
+<h1>Microchip MCP4131</h1>
+
+<p>The MCP4131 is a 7-bit digital potentiometer. 
+It has an SPI interface.</p>
+
+<p><img src="block_diagram.gif" width="640" height="403" alt="MCP4131 block diagram"></p>
+
+<p>
+<img src="pdip.gif" width="291" height="320" alt="MCP4131 pinout">
+<img src="mcp4131.jpg" width="285" height="320" alt="MCP4131-103E/P">
+</p>
+
+<section>
+	<h2>SPI interface</h2>
+	
+	<img src="spi.gif" width="640" height="457" alt="MCP4131 SPI interface">
+	
+	<table border align="center">
+	<tr><th>Address</th><th>Function</th></tr>
+	<tr><td>0x00</td><td>Volatile Wiper 0</td></tr>
+	<tr><td>0x01</td><td>Volatile Wiper 1</td></tr>
+	<tr><td>0x04</td><td>Volatile TCON Register</td></tr>
+	<tr><td>0x05</td><td>Status Register</td></tr>
+	</table>
+
+	<table border align="center">
+	<tr><th>C1:C0</th><th>Command</th><th>Type</th></tr>
+	<tr><td>00</td><td>Write Data</td><td>16-bit</td></tr>
+	<tr><td>01</td><td>Increment</td><td>8-bit</td></tr>
+	<tr><td>10</td><td>Decrement</td><td>8-bit</td></tr>
+	<tr><td>11</td><td>Read Data</td><td>16-bit</td></tr>
+	</table>
+</section>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Libopenstm32l0x2 maintained by <a href="https://github.com/tyoshid">tyoshid</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
+<!-- footer -->
+

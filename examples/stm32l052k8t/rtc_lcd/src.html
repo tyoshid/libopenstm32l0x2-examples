@@ -1,0 +1,51 @@
+<!-- header -->
+
+<!-- panorama -->
+	
+<!-- schematic -->
+
+<!-- layout -->
+
+<nav>
+	<ul>
+	<li><a href="../../../parts/stm32l052k8t/description.html" target="_blank">MCU (STM32L052K8T)</a></li>
+	<li><a href="../../../parts/sli-343x8/description.html" target="_blank">LED (SLI-343x8)</a></li>
+	<li><a href="../../../parts/character_lcd/description.html" target="_blank">Character LCD</a></li>
+	<li><a href="../../../parts/mcp4131/description.html" target="_blank">Digital potentiometer (MCP4131)</a></li>
+	<li><a href="../../../parts/nds331n/description.html" target="_blank">FET (NDS331N)</a></li>
+	</ul>
+</nav>
+
+<section>
+	<h2>Adjust</h2>
+
+<pre><samp>$ </samp><kbd>sudo stty -F /dev/ttyACM0 115200</kbd><samp>
+$ </samp><kbd>sudo bash -c 'echo "date `date`" > /dev/ttyACM0'</kbd><samp>
+$ </samp><kbd>sudo bash -c 'echo "synchronize `date +%S.%6N`" > /dev/ttyACM0'</kbd><samp>
+$ </samp></pre>
+</section>
+
+<section>
+	<h2>minicom</h2>
+	
+<pre><samp>$ </samp><kbd>sudo minicom -D /dev/ttyACM0</kbd></pre>
+
+<pre><samp>
+Welcome to minicom 2.7.1
+
+OPTIONS: I18n 
+Compiled on Jul 15 2017, 15:04:10.
+Port /dev/ttyACM0, 12:58:06
+
+Press CTRL-A Z for help on special keys
+
+rtc_lcd> </samp><kbd>contrast 100</kbd><samp>
+100
+rtc_lcd> </samp><kbd>bright 255</kbd><samp>                                                             
+255                                                                             
+rtc_lcd> </samp></pre>
+</section>
+
+<!-- footer -->
+
+

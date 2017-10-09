@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>OSL40562-IR</title>
+<link href="../../stylesheets/stylesheet.css" rel="stylesheet" type="text/css" media="screen">
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/tyoshid/libopenstm32l0x2" target="_blank">View on GitHub</a>
+
+          <h1 id="project_title">Libopenstm32l0x2</h1>
+          <h2 id="project_tagline">STM32L0x2 peripheral library</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<!-- header -->
+
+<h1>Optosupply OSL40562-IR</h1>
+
+<p>The OSL40562-IR is a 0.56 inch 4-digit 7-segment LED display.
+It has a common anode.</p>
+
+<p><img src="osl40562-ir.jpg" width="320" height="160" alt="OSL40562-IR"></p>
+<p><img src="osl40562-ir_b.jpg" width="320" height="152" alt="OSL40562-IR (back)">
+
+<p><img src="osl40562-ir.gif" width="640" height="281" alt="OSL40562-IR pin connection"></p>
+
+<table border align="center">
+<tr><th>pin number</th><th>Name</th><th></th><th>pin number</th><th>Name</th></tr>
+<tr><td>1</td><td>E</td><th></th><td>12</td><td>DIG1</td></tr>
+<tr><td>2</td><td>D</td><th></th><td>11</td><td>A</td></tr>
+<tr><td>3</td><td>DP</td><th></th><td>10</td><td>F</td></tr>
+<tr><td>4</td><td>C</td><th></th><td>9</td><td>DIG2</td></tr>
+<tr><td>5</td><td>G</td><th></th><td>8</td><td>DIG3</td></tr>
+<tr><td>6</td><td>DIG4</td><th></th><td>7</td><td>B</td></tr>
+</table>
+
+<article>
+	<h3>Forward current</h3>
+		
+	<p><img src="current.gif" width="240" height="280" alt="LED forward current"></p>
+		
+	<p>I<sub>F</sub> = (V &minus; V<sub>F</sub> &minus; V<sub>OL</sub>) / R</p> 
+
+	<hr>
+	<p>V = 3.3 V, R = 180 &Omega;</p>
+	<p>I<sub>F</sub> = (3.3 V &minus; [1.8 &ndash; 2.3 V] &minus; [0 &ndash; 0.4 V]) / 180 &Omega; &asymp; 3 &ndash; 8 mA</p>
+	<p>I<sub>DIG.max</sub> = I<sub>F.max</sub> &times; 8 = 64 mA</p>
+</article>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Libopenstm32l0x2 maintained by <a href="https://github.com/tyoshid">tyoshid</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
+<!-- footer -->
+

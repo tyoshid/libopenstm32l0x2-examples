@@ -1,0 +1,92 @@
+<!-- header -->
+
+<h1>SparkFun Rotary Encoder - Illuminated (RGB)</h1>
+
+<p>(Top-up EC12PLRGBSDVBF-D-25K-24-24C-61)</p>
+<p>This is a 24-step rotary encoder with detent. It has three (Red/Green/Blue) LEDs and a push-button.</p>
+
+<p><img src="encoder.jpg" width="320" height="211" alt="Rotary encoder"></p>
+<p><img src="encoder_s.jpg" width="320" height="425" alt="Rotary encoder (side)"></p>
+
+<section>
+	<h2>Encoder</h2>
+
+	<p><img src="encoder.gif" width="640" height="440" alt="Block diagram"></p>
+
+	<article>
+		<h3>Debouncer</h3>
+
+		<p><img src="debouncer1.gif" width="320" height="366" alt="Debouncer"></p>
+
+		<p>&tau; &asymp; C &times; (R1 + R2)</p>
+
+		<p>I &asymp; V / R1 (resistive)</p>
+
+		<hr>				
+		<p>V = 3.3 V, R1 = 6.2 k&Omega;, R2 = 15 k&Omega;, C = 0.01 &mu;F</p>
+			
+		<p>&tau; &asymp; 0.01 &mu;F &times; (6.2 k&Omega; + 15 k&Omega;) = 0.2 msec</p>
+
+		<p>I &asymp; 3.3 V / 6.2 k&Omega; = 0.5 mA</p>
+	</article>
+</section>
+
+<section>
+	<h2>LED</h2>
+
+	<p><img src="led.gif" width="320" height="244" alt="LED connection"></p>
+
+	<article>
+		<h3>Forward current</h3>
+		
+		<p><img src="current.gif" width="240" height="280" alt="LED forward current"></p>
+		
+		<p>I<sub>F</sub> = (V &minus; V<sub>F</sub> &minus; V<sub>OL</sub>) / R</p> 
+
+		<hr>
+		<h3>Red</h3>
+		<p>V = 5 V, R = 560 &Omega;</p>
+		<p>I<sub>F</sub> = (5 V &minus; [2.0 &ndash; 2.4 V] &minus; [0 &ndash; 0.4 V]) / 560 &Omega; &asymp; 4 &ndash; 5 mA</p>
+
+		<hr>
+		<h3>Green</h3>
+		<p>V = 5 V, R = 220 &Omega;</p>
+		<p>I<sub>F</sub> = (5 V &minus; [3.3 &ndash; 3.7 V] &minus; [0 &ndash; 0.4 V]) / 220 &Omega; &asymp; 4 &ndash; 8 mA</p>
+
+		<hr>
+		<h3>Blue</h3>
+		<p>V = 5 V, R = 220 &Omega;</p>
+		<p>I<sub>F</sub> = (5 V &minus; [3.3 &ndash; 3.7 V] &minus; [0 &ndash; 0.4 V]) / 220 &Omega; &asymp; 4 &ndash; 8 mA</p>
+	</article>
+</section>
+
+<section>
+	<h2>Push-button</h2>
+	
+	<p><img src="sw.gif" width="200" height="200" alt="SW connection"></p>
+	
+	<article>
+		<h3>Debouncer</h3>
+
+		<p><img src="debouncer2.gif" width="320" height="457" alt="Debouncer"></p>
+	
+		<p>R1, R2 &#x226A; R3 :</p>
+
+		<p>&tau; &asymp; C &times; R3</p>
+
+		<p>V1 &asymp; V &times; (R2 / (R1 + R2))</p>
+
+		<p>I &asymp; V / (R1 + R2) (resistive)</p>
+
+		<hr>
+		<p>V = 5 V, R1 = 1 k&Omega;, R2 = 1.5 k&Omega;, R3 = 10 k&Omega;, C = 1 &mu;F</p>
+				
+		<p>&tau; &asymp; 1 &mu;F &times; 10 k&Omega; = 10 msec</p>
+
+		<p>V1 &asymp; 5 V &times; (1.5 k&Omega; / (1 k&Omega; + 1.5 k&Omega;)) = 3 V</p>
+		
+		<p>I &asymp; 5 V / (1 k&Omega; + 1.5 k&Omega;) = 2 mA</p>
+	</article>
+</section>
+
+<!-- footer -->

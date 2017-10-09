@@ -1,0 +1,58 @@
+<!-- header -->
+
+<h1>Freescale MPL115A1</h1>
+
+<p>The MPL115A1 is an absolute pressure sensor.
+It has an SPI interface.</p>
+
+<p><img src="mpl115a1.gif" width="320" height="252" alt="MPL115A1 pin connection"></p>
+<p><img src="mpl115a1.jpg" width="320" height="300" alt="MPL115A1 module"></p>
+
+<section>
+	<h2>SPI interface</h2>
+	
+	<p><img src="spi.gif" width="640" height="321" alt="MPL115A1 SPI interface"></p>
+	
+	<table border align="center">
+	<tr><th>Address</th><th>Name</th><th>Description</th></tr>
+	<tr><td>0x00</td><td>Padc_MSB</td><td>10-bit Pressure ADC output value MSB</td></tr>
+	<tr><td>0x01</td><td>Padc_LSB</td><td>10-bit Pressure ADC output value LSB</td></tr>
+	<tr><td>0x02</td><td>Tadc_MSB</td><td>10-bit Temperature ADC output value MSB</td></tr>
+	<tr><td>0x03</td><td>Tadc_MSB</td><td>10-bit Temperature ADC output value LSB</td></tr>
+	<tr><td>0x04</td><td>a0_MSB</td><td>a0 coefficient MSB</td></tr>
+	<tr><td>0x05</td><td>a0_LSB</td><td>a0 coefficient LSB</td></tr>
+	<tr><td>0x06</td><td>b1_MSB</td><td>b1 coefficient MSB</td></tr>
+	<tr><td>0x07</td><td>b1_LSB</td><td>b1 coefficient LSB</td></tr>
+	<tr><td>0x08</td><td>b2_MSB</td><td>b2 coefficient MSB</td></tr>
+	<tr><td>0x09</td><td>b2_LSB</td><td>b2 coefficient LSB</td></tr>
+	<tr><td>0x0a</td><td>c12_MSB</td><td>c12 coefficient MSB</td></tr>
+	<tr><td>0x0b</td><td>c12_LSB</td><td>c12 coefficient LSB</td></tr>
+	<tr><td>0x0c</td><td>Reserved</td><td></td></tr>
+	<tr><td>0x0d</td><td>Reserved</td><td></td></tr>
+	<tr><td>0x0e</td><td>Reserved</td><td></td></tr>
+	<tr><td>0x0f</td><td>Reserved</td><td></td></tr>
+	<tr><td>0x10</td><td>Reserved</td><td></td></tr>
+	<tr><td>0x11</td><td>Reserved</td><td></td></tr>
+	<tr><td>0x12</td><td>CONVERT</td><td>Start Pressure and Temperature Conversion</td></tr>
+	</table>
+	
+	<p><img src="command.gif" width="640" height="640" alt="MPL115A1 SPI command"></p>
+</section>
+
+<section>
+	<h2>Compensation</h2>
+	
+	<p>a0 = S I<sub>11</sub> &ndash; I<sub>0</sub> . F<sub>2</sub> &ndash; F<sub>0</sub></p>
+	<p>b1 = S I<sub>1</sub> I<sub>0</sub> . F<sub>12</sub> &ndash; F<sub>0</sub></p>
+	<p>b2 = S I<sub>0</sub> . F<sub>13</sub> &ndash; F<sub>0</sub></p>
+	<p>c12 = S 0.000 000 000 F<sub>12</sub> &ndash; F<sub>0</sub></p>
+	<p>Padc = I<sub>9</sub> &ndash; I<sub>0</sub></p>
+	<p>Tadc = I<sub>9</sub> &ndash; I<sub>0</sub></p>
+	
+	<p>Pcomp = a0 + (b1 + c12 &times; Tadc) &times; Padc + b2 &times; Tadc</p>
+	
+	<p>Pressure(kPa) = Pcomp &times; ((115 - 50) / 1023) + 50</p>
+</section>
+	
+<!-- footer -->
+

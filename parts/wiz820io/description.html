@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>WIZ820io</title>
+<link href="../../stylesheets/stylesheet.css" rel="stylesheet" type="text/css" media="screen">
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/tyoshid/libopenstm32l0x2" target="_blank">View on GitHub</a>
+
+          <h1 id="project_title">Libopenstm32l0x2</h1>
+          <h2 id="project_tagline">STM32L0x2 peripheral library</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<!-- header -->
+
+<h1>WIZnet WIZ820io</h1>
+
+<p>The WIZ820io is an ethernet module with hardware TCP/IP.
+It has an SPI interface.</p>
+<p><em>Note: The current consumption of the WIZ820io may be more than 100 mA.</em></p>
+
+<p><img src="wiz820io.gif" width="480" height="432" alt="WIZ820io pinout"></p>
+
+<section class="layout">
+<p><img src="layout.jpg" width="305" height="344" alt="WIZ820io layout"></p>
+<p><img src="layout_b.jpg" width="305" height="344" alt="WIZ820io layout (back)"></p>
+</section>
+<!-- layout -->
+
+<section>
+	<h2>SPI interface</h2>
+
+	<p><img src="spi.gif" width="640" height="349" alt="WIZ820io SPI interface"></p>
+	
+	<p><img src="read.gif" width="640" height="549" alt="WIZ820io SPI read"></p>
+	<p><img src="write.gif" width="640" height="549" alt="WIZ820io SPI write"></p>
+</section>
+
+<section>
+	<h2>Memory map</h2>
+	
+	<p><img src="memorymap.gif" width="417" height="673" alt="WIZ820io memory map"></p>
+
+	<h3>Common registers</h3>
+	
+	<table border align="center">
+	<tr><th>Address</th><th>Register</th><th></th><th>Address</th><th>Register</th></tr>
+	<tr><td>0x0000</td><td>MR</td><th></th><td>0x0015</td><td>IR</td></tr>
+	<tr><td>0x0001</td><td>GAR0</td><th></th><td>0x0016</td><td>IMR</td></tr>
+	<tr><td>0x0002</td><td>GAR2</td><th></th><td>0x0017</td><td>RTR0</td></tr>
+	<tr><td>0x0003</td><td>GAR2</td><th></th><td>0x0018</td><td>RTR1</td></tr>
+	<tr><td>0x0004</td><td>GAR3</td><th></th><td>0x0019</td><td>RCR</td></tr>
+	<tr><td>0x0005</td><td>SUBR0</td><th></th><td>0x001C</td><td>PATR0</td></tr>
+	<tr><td>0x0006</td><td>SUBR1</td><th></th><td>0x001D</td><td>PATR1</td></tr>
+	<tr><td>0x0007</td><td>SUBR2</td><th></th><td>0x001E</td><td>PPPALGO</td></tr>
+	<tr><td>0x0008</td><td>SUBR3</td><th></th><td>0x001F</td><td>VERSIONR</td></tr>
+	<tr><td>0x0009</td><td>SHAR0</td><th></th><td>0x0028</td><td>PTIMER</td></tr>
+	<tr><td>0x000A</td><td>SHAR1</td><th></th><td>0x0029</td><td>PMAGIC</td></tr>
+	<tr><td>0x000B</td><td>SHAR2</td><th></th><td>0x0030</td><td>INTLEVEL0</td></tr>
+	<tr><td>0x000C</td><td>SHAR3</td><th></th><td>0x0031</td><td>INTLEVEL1</td></tr>
+	<tr><td>0x000D</td><td>SHAR4</td><th></th><td>0x0034</td><td>IR2</td></tr>
+	<tr><td>0x000E</td><td>SHAR5</td><th></th><td>0x0035</td><td>PSTATUS</td></tr>
+	<tr><td>0x000F</td><td>SIPR0</td><th></th><td>0x0036</td><td>IMR2</td></tr>
+	<tr><td>0x0010</td><td>SIPR1</td><th></th><td></td><td></td></tr>
+	<tr><td>0x0011</td><td>SIPR2</td><th></th><td></td><td></td></tr>
+	<tr><td>0x0012</td><td>SIPR3</td><th></th><td></td><td></td></tr>
+	</table>
+	
+	<h3>Socket registers</h3>
+
+	<table border align="center">
+	<tr><th>Address</th><th>Register</th><th></th><th>Address</th><th>Register</th></tr>
+	<tr><td>0x4n00</td><td>Sn_MR</td><th></th><td>0x4n14</td><td>Sn_PROTO</td></tr>
+	<tr><td>0x4n01</td><td>Sn_CR</td><th></th><td>0x4n15</td><td>Sn_TOS</td></tr>
+	<tr><td>0x4n02</td><td>Sn_IR</td><th></th><td>0x4n16</td><td>Sn_TTL</td></tr>
+	<tr><td>0x4n03</td><td>Sn_SR</td><th></th><td>0x4n1E</td><td>Sn_RXMEM_SIZE</td></tr>
+	<tr><td>0x4n04</td><td>Sn_PORT0</td><th></th><td>0x4n1F</td><td>Sn_TXMEM_SIZE</td></tr>
+	<tr><td>0x4n05</td><td>Sn_PORT1</td><th></th><td>0x4n20</td><td>Sn_TX_FSR0</td></tr>
+	<tr><td>0x4n06</td><td>Sn_DHAR0</td><th></th><td>0x4n21</td><td>Sn_TX_FSR1</td></tr>
+	<tr><td>0x4n07</td><td>Sn_DHAR1</td><th></th><td>0x4n22</td><td>Sn_TX_RD0</td></tr>
+	<tr><td>0x4n08</td><td>Sn_DHAR2</td><th></th><td>0x4n23</td><td>Sn_TX_RD1</td></tr>
+	<tr><td>0x4n09</td><td>Sn_DHAR3</td><th></th><td>0x4n24</td><td>Sn_TX_WR0</td></tr>
+	<tr><td>0x4n0A</td><td>Sn_DHAR4</td><th></th><td>0x4n25</td><td>Sn_TX_WR1</td></tr>
+	<tr><td>0x4n0B</td><td>Sn_DHAR5</td><th></th><td>0x4n26</td><td>Sn_RX_RSR0</td></tr>
+	<tr><td>0x4n0C</td><td>Sn_DIPR0</td><th></th><td>0x4n27</td><td>Sn_RX_RSR1</td></tr>
+	<tr><td>0x4n0D</td><td>Sn_DIPR1</td><th></th><td>0x4n28</td><td>Sn_RX_RD0</td></tr>
+	<tr><td>0x4n0E</td><td>Sn_DIPR2</td><th></th><td>0x4n29</td><td>Sn_RX_RD1</td></tr>
+	<tr><td>0x4n0F</td><td>Sn_DIPR3</td><th></th><td>0x4n2A</td><td>Sn_RX_WR0</td></tr>
+	<tr><td>0x4n10</td><td>Sn_DPORT0</td><th></th><td>0x4n2B</td><td>Sn_RX_WR1</td></tr>
+	<tr><td>0x4n11</td><td>Sn_DPORT1</td><th></th><td>0x4n2C</td><td>Sn_IMR</td></tr>
+	<tr><td>0x4n12</td><td>Sn_MSSR0</td><th></th><td>0x4n2D</td><td>Sn_FRAG0</td></tr>
+	<tr><td>0x4n13</td><td>Sn_MSSR1</td><th></th><td>0x4n2E</td><td>Sn_FRAG1</td></tr>	
+	</table>	
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Libopenstm32l0x2 maintained by <a href="https://github.com/tyoshid">tyoshid</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
+<!-- footer -->
+
